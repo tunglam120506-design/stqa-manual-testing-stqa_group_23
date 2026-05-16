@@ -1,0 +1,64 @@
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-decoration: overline;
+    text-align: left;
+    /* text-indent: 50px; */
+    border: 5px solid red;
+    margin: 50px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: brown;
+}
+
+p {
+    /* text-indent: 10px; */
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+span {
+    border: 1px solid gray;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgb(221, 52, 58);
+    color: white;
+}
+
+.transition {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    transition: width 2s, height 2s;
+}
+
+.transition:hover {
+    width: 200px;
+    height: 200px;
+}
+
+
+.animation {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    animation: test 10s linear 2s;
+}
+
+@keyframes test {
+    0% {background-color: red; left: 0; top: 0;}
+    25% {background-color: yellow; left: 300px; top: 0; border-radius: 50%;}
+    50% {background-color: green; left: 300px; top: 300px;}
+    75% {background-color: violet; left: 0px; top: 300px;}
+    100% {background-color: red; left: 0; top: 0;}
+}

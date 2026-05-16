@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div id="card" class="card">
+        <div class="img"><img src="../img/546019_5_500x.webp"></div> <!--add image-->
+        <div class="title">GEOX</div> <!--add title-->
+        <div class="desc">Trainers, brown<br>39</div> <!--add desc-->
+        <div class="box">
+            <div class="price">23€</div>
+            <button class="purchase">Buy</button>
+        </div>
+    </div>
+    </div>
+<script>
+    // Tableau avec 2 éléments
+    let tableau = [
+        {"img":"../img/546019_5_500x.webp",
+        "title":"GEOX",
+        "desc":"Trainers, brown<br>39",
+        "price":"23€"},
+        {"img":"../img/546012_5_500x.webp",
+        "title":"XXX",
+        "desc":"XXXXXXX<br>39",
+        "price":"40"}
+    ]
+    // recherche de la Card model
+    let Card=document.querySelector(".card");
+    // variable pour travailler la Card
+    let tempCard = Card;
+    // lecture de chaque élément du tableau
+    for(let i=0;i<tableau.length;i++){
+        // affiche dans la console le numéro de l'élément
+        console.log(i)
+        // si élément supérieur au premier, alors on clone la card
+        if(i>0){
+            // clonage de la card
+            tempCard = Card.cloneNode(true);
+            // insertion dans le page de la Card clonée
+            Card.insertAdjacentElement("afterend",tempCard);
+         }
+        // lecture de chaque item dans l'élément du tableau
+        Object.entries(tableau[i]).forEach(([key, value]) => {
+            // affiche dans la console chaque item de l'élément du tableau
+            console.log(key,value)
+            // remlace dans la card chaque item dans le code HTML
+            let oTemp = tempCard.querySelector("."+key);
+            oTemp.innerHTML=value;
+        })
+
+    }
+
+</script>
+</body>
+</html>

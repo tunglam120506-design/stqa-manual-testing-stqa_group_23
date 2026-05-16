@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>E-shop</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo"><h1>E-shop</h1></div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Updates</a></li>
+            <li><a href="#" class="fa-solid fa-user"></a></li>
+            <li><a href="#" class="fa-solid fa-cart-shopping"></a></li>
+        </ul>
+        <input type="search" placeholder="search">
+    </nav>
+    
+    <section class="content">
+        <h1>Updates</h1>
+        <p>Our catalog with the most recent updates</p>
+        <button>DISCOVER</button>
+    </section>
+
+    <h1 class="products_text">Our products</h1>
+    <section class="section_products">
+        <div class="products">
+            <div class="card">
+                <div class="img"><img src="#"></div>
+                <div class="title"></div>
+                <div class="desc"></div>
+                <div class="box">
+                    <div class="price"></div>
+                    <button class="purchase">BUY</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <a href="#"> E-shop </a></p>
+        <div class="social">
+            <p><i class="fa-brands fa-facebook"></i></p>
+            <p><i class="fa-brands fa-twitter"></i></p>
+            <p><i class="fa-brands fa-square-instagram"></i></p>
+            <p><i class="fa-brands fa-linkedin"></i></p>
+        </div>
+    </footer>
+
+    <script>
+        // Tableau avec 2 éléments
+        let tableau = [
+            {"img":"../img/546019_5_500x.webp",
+            "title":"GEOX",
+            "desc":"Trainers, brown<br>39",
+            "price":"23€"},
+            {"img":"../img/546020_5_500x.webp",
+            "title":"GEOX",
+            "desc":"Trainers, gray<br>39",
+            "price":"23€"},
+            {"img":"../img/550762_5_500x.webp",
+            "title":"REDSKINS",
+            "desc":"Boots, black<br>36",
+            "price":"17€"},
+            {"img":"../img/556129_5_500x.webp",
+            "title":"GEOX",
+            "desc":"Trainers, black<br>37",
+            "price":"23€"},
+            {"img":"../img/558017_5_500x.webp",
+            "title":"PRETTY LITTLE THING",
+            "desc":"Court shoes, black<br>38",
+            "price":"14€"},
+            {"img":"../img/C_Users_Administrateur_photo_flask_tmp2_550122_5_500x.webp",
+            "title":"ADIDAS",
+            "desc":"Trainers, black<br>38.5",
+            "price":"25€"}
+        ]
+        // recherche de la Card model
+        let Card=document.querySelector(".card");
+        // variable pour travailler la Card
+        let tempCard = Card;
+        // lecture de chaque élément du tableau
+        for(let i=0;i<tableau.length;i++){
+            // affiche dans la console le numéro de l'élément
+            console.log(i)
+            // si élément supérieur au premier, alors on clone la card
+            if(i>0){
+                // clonage de la card
+                tempCard = Card.cloneNode(true);
+                // insertion dans le page de la Card clonée
+                Card.insertAdjacentElement("afterend",tempCard);
+             }
+            // lecture de chaque item dans l'élément du tableau
+            Object.entries(tableau[i]).forEach(([key, value]) => {
+                // affiche dans la console chaque item de l'élément du tableau
+                console.log(key,value)
+                // remlace dans la card chaque item dans le code HTML
+                if(key==='img'){
+                    let oTemp = tempCard.querySelector(key);
+                    oTemp.src=value;
+                }else{
+                    let oTemp = tempCard.querySelector("."+key);
+                    oTemp.innerHTML=value;
+                }
+                
+            })
+    
+        }
+    
+    </script>
+</body>
+</html>

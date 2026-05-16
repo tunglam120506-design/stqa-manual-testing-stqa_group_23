@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+    .container {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select {
+        width: calc(50% - 5px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 5px;
+        display: inline-block;
+    }
+    .form-group select {
+        width: 50%;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group.name {
+        display: block;
+    }
+    .form-group.birthday,
+    .form-group.gender-options {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .gender-options label {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .gender-options input[type="radio"] {
+        display: none;
+    }
+    .gender-options .circle {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        position: relative;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .gender-options input[type="radio"]:checked + .circle::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <form action="#" method="post">
+        <div class="form-group name">
+            <div class="form-group first-name">
+                <input type="text" placeholder="First name" id="first_name" name="first_name">
+            </div>
+            <div class="form-group last-name">
+                <input type="text" placeholder="Last name" id="last_name" name="last_name">
+            </div>
+        </div>
+        <div class="form-group birthday">
+            <label for="birthday">Birthday</label>
+            <input type="date" placeholder="Birthday" id="birthday" name="birthday">
+        </div>
+        <div class="form-group gender-options">
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male">
+                <span class="circle"></span> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female">
+                <span class="circle"></span> Female
+            </label>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other">
+                <span class="circle"></span> Other
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="subject">Choose Option</label>
+            <select id="subject" name="subject">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
