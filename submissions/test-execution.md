@@ -15,6 +15,7 @@
 ## Kết quả chi tiết
 
 | Mã TC | Nhóm chức năng | Kết quả mong đợi (tóm tắt) | Kết quả thực tế | Kết luận | Minh chứng | Bug |
+|-------|----------------|----------------------------|-----------------|----------|------------|-----|
 | TC-01 | Login | Redirects to home, shows "Nguyễn Thủ Thư" | As expected | Pass | [TC01](image.png) | - |
 | TC-02 | Login | Redirects to home, shows "Nguyễn Học Bá" | As expected | Pass | [TC02](image-1.png) | - |
 | TC-03 | Login | Displays error: "Mật khẩu không đúng" | As expected | Pass | [TC03](image-2.png) | - |
@@ -46,6 +47,7 @@
 ## Tổng hợp kết quả
 
 |      Chỉ số       | Giá trị |
+|-------------------|---------|
 | Tổng số test case |    25   |
 |        Pass       |    21   |
 |        Fail       |    4    |
@@ -56,6 +58,7 @@
 ### Kết quả theo nhóm chức năng
 
 | Nhóm | Tổng TC | Pass | Fail | Tỷ lệ Pass |
+|------|---------|------|------|------------|
 | Login | 5 | 5 | 0 | 100% |
 | Book listing | 1 | 1 | 0 | 100% |
 | Book search | 3 | 3 | 0 | 100% |

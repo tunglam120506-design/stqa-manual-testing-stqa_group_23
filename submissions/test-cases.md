@@ -102,6 +102,7 @@
 ## Tổng hợp
 
 | Nhóm chức năng | Số TC | REQ phủ | Kỹ thuật IDM áp dụng |
+|----------------|-------|---------|----------------------|
 | Login | 5 | REQ-01 | EP |
 | Book listing, searching, and filtering | 5 | REQ-02, REQ-03 | EP |
 | Borrow book | 5 | REQ-04 | EP, BVA, Decision Table |
