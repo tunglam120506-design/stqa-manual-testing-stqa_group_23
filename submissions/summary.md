@@ -33,11 +33,11 @@
 |----------------|----|------|------|-----|----------|
 | Đăng nhập (Login) | 5 | 5 | 0 | 0 | Hoạt động rất ổn định, phân quyền chính xác giữa các tài khoản |
 | Danh sách sách (Book listing) | 1 | 1 | 0 | 0 | Hiển thị đầy đủ số lượng và trạng thái ban đầu chính xác |
-| Tìm kiếm & Lọc sách (Search & Filter) |----|------|------|-----| Tìm kiếm theo tên/tác giả tốt, bộ lọc danh mục hoạt động đúng |
-| Mượn sách (Borrow book) | 4 | 4 | 0 | 0 | Kiểm tra tốt các ràng buộc về số lượng sách, trạng thái tài khoản |
-| Trả sách (Return book) | 5 | 5 | 0 | 0 | Trả sách thành công nhưng không cảnh báo khi thành viên trả muộn |
-| Xử lý quá hạn (Overdue handling) | 2 | 1 | 1 | 1 | Lỗi nghiêm trọng: Nút quét kiểm tra quá hạn không hoạt động |
-| Quản lý thành viên (Member management) | 1 | 0 | 1 | 1 | Lỗi logic: Validate Email bị ngược (cho qua email sai, chặn email đúng) |
+| Tìm kiếm & Lọc sách (Search & Filter) | 4 | 4 | 0 | 0 | Tìm kiếm theo tên/tác giả tốt, bộ lọc danh mục hoạt động đúng |
+| Mượn sách (Borrow book) | 5 | 5 | 0 | 0 | Kiểm tra tốt các ràng buộc về số lượng sách, trạng thái tài khoản |
+| Trả sách (Return book) | 2 | 1 | 1 | 1 | Trả sách thành công nhưng không cảnh báo khi thành viên trả muộn |
+| Xử lý quá hạn (Overdue handling) | 1 | 0 | 1 | 1 | Lỗi nghiêm trọng: Nút quét kiểm tra quá hạn không hoạt động |
+| Quản lý thành viên (Member management) | 4 | 2 | 2 | 2 | Lỗi logic: Validate Email bị ngược (cho qua email sai, chặn email đúng) |
 | Tra cứu lịch sử mượn (Record lookup) | 3 | 3 | 0 | 0 | Bảo mật tốt, thành viên không xem được bản ghi của người khác |
 
 
