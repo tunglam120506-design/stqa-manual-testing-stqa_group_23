@@ -54,13 +54,22 @@
 | Số sách đang mượn? | < 3 (BVA: 0, 1, 2) | MEM006 (0 sách) | Cho phép mượn |
 | | = 3 (BVA: giới hạn) | MEM đã mượn 3 sách | Từ chối, thông báo vượt giới hạn |
 
-### IDM — `<!-- Nhóm tự bổ sung cho REQ-05 đến REQ-08 -->`
+### IDM — `(REQ-05 đến REQ-08)
 
 | Đặc tính (Characteristic) | Phân vùng (Block) | Giá trị đại diện (Value) | Kết quả mong đợi |
 |---|---|---|---|
-| `<!-- Nhóm tự điền -->` | | | |
-
-> 💡 **Gợi ý kỹ thuật**: Sử dụng **Phân lớp tương đương (EP)** cho các phân vùng rời rạc, **Phân tích giá trị biên (BVA)** cho các phân vùng số (ví dụ: giới hạn 3 sách). Xem textbook §6.1–6.3.
+| Hạn trả sách khi thực hiện trả? (REQ-05) | Trong hạn | Phiếu mượn `BR003` | Trả sách thành công, trạng thái sách về "Có sẵn" |
+| | Quá hạn (BVA) | Phiếu mượn `BR001` | Trả sách thành công kèm cảnh báo quá hạn |
+| Cập nhật trạng thái quá hạn? (REQ-06) | Kích hoạt bởi Thủ thư | Nhấn nút "Kiểm tra quá hạn" | Tự động quét và chuyển trạng thái các phiếu quá hạn |
+| Định dạng Email khi thêm thành viên? (REQ-07) | Đúng định dạng | `some@email.com` | Thêm thành viên thành công |
+| | Định dạng không hợp lệ | `user@domain` | Báo lỗi định dạng Email không hợp lệ |
+| | Trùng lặp Email | `ba.nguyen@email.com` | Báo lỗi Email đã tồn tại, chặn tạo mới |
+| Định dạng số điện thoại? (REQ-07) | Hợp lệ (10 số) | `0987654321` | Hệ thống chấp nhận dữ liệu |
+| | Không hợp lệ (BVA: Thiếu số) | `012345` | Báo lỗi định dạng số điện thoại không hợp lệ |
+| Quyền xem lịch sử mượn/trả? (REQ-08) | Vai trò Thành viên | Logged in as Thành viên | Chỉ hiển thị các phiếu mượn của chính mình |
+| | Vai trò Thủ thư | Logged in as Thủ thư | Hiển thị toàn bộ dữ liệu phiếu mượn của hệ thống |
+| Tra cứu phiếu mượn cụ thể? (REQ-08) | Phiếu của chính mình | Tìm `BR001` (bởi ba.nguyen) | Hiển thị thông tin chi tiết phiếu mượn |
+| | Phiếu của người khác | Tìm `BR002` (bởi ba.nguyen) | Từ chối truy cập hoặc trả về danh sách rỗng |
 
 ---
 
